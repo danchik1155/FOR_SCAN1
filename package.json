@@ -1,0 +1,213 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "prettier": {
+    "tabWidth": 4,
+    "singleQuote": true,
+    "printWidth": 140,
+    "trailingComma": "all"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "@typescript-eslint/tslint"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "useJSXTextNode": true,
+      "project": "./tsconfig.json",
+      "tsconfigRootDir": "./"
+    },
+    "globals": {
+      "GRC": "readonly",
+      "ControlServices": "readonly",
+      "Workflow": "readonly",
+      "DevExpress": "readonly",
+      "window": "readonly",
+      "FileReader": "readonly",
+      "FormData": "readonly",
+      "requirejs": "readonly",
+      "describe": "readonly",
+      "expect": "readonly",
+      "it": "readonly",
+      "beforeEach": "readonly",
+      "afterEach": "readonly",
+      "beforeAll": "readonly",
+      "afterAll": "readonly"
+    },
+    "rules": {
+      "@typescript-eslint/array-type": [
+        "warn",
+        "array-simple"
+      ],
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/interface-name-prefix": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "no-plusplus": [
+        "warn",
+        {
+          "allowForLoopAfterthoughts": true
+        }
+      ],
+      "import/no-webpack-loader-syntax": 0,
+      "spaced-comment": [
+        "warn",
+        "always",
+        {
+          "exceptions": [
+            "#region",
+            "#endregion"
+          ]
+        }
+      ],
+      "no-bitwise": 0,
+      "import/no-extraneous-dependencies": 0,
+      "lines-between-class-members": 0,
+      "class-methods-use-this": 0,
+      "import/no-amd": 0,
+      "import/prefer-default-export": 0,
+      "func-names": 0,
+      "no-param-reassign": 0,
+      "no-restricted-syntax": 0,
+      "@typescript-eslint/no-object-literal-type-assertion": 0,
+      "@typescript-eslint/tslint/config": [
+        "warn",
+        {
+          "rules": {
+            "deprecation": true
+          }
+        }
+      ]
+    },
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts"
+        ]
+      },
+      "import/resolver": {
+        "typescript": {}
+      }
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ]
+  },
+  "scripts": {
+    "postinstall": "cd ../GRC.Web.Admin && npm install"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^3.3.39",
+    "@types/d3": "^3.5.36",
+    "@types/d3-dsv": "^1.0.32",
+    "@types/d3-queue": "^3.0.5",
+    "@types/durandal": "^2.1.36",
+    "@types/jasmine": "^2.8.9",
+    "@types/jquery": "^1.10.34",
+    "@types/jquery.highlight-bartaz": "0.0.30",
+    "@types/jqueryui": "^1.12.2",
+    "@types/jsplumb": "^1.3.31",
+    "@types/jstree": "^3.3.37",
+    "@types/jszip": "^3.1.4",
+    "@types/karma": "^3.0.0",
+    "@types/knockout": "^3.4.53",
+    "@types/knockout.mapping": "^2.0.33",
+    "@types/knockout.validation": "0.0.36",
+    "@types/requirejs": "^2.1.31",
+    "@types/select2": "^3.5.0",
+    "@types/split.js": "^1.3.1",
+    "@types/store": "^1.3.0",
+    "@types/storejs": "^2.0.2",
+    "@types/toastr": "^2.1.35",
+    "@types/topojson": "^3.2.0",
+    "@types/underscore": "^1.8.8",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/eslint-plugin-tslint": "latest",
+    "@typescript-eslint/parser": "latest",
+    "del": "^3.0.0",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-import-resolver-typescript": "latest",
+    "eslint-plugin-import": "latest",
+    "gulp": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^5.0.1",
+    "gulp-uglify": "^3.0.0",
+    "karma": "^3.1.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-requirejs": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-typescript": "^3.0.13",
+    "karma-typescript-preprocessor": "^0.4.0",
+    "path": "^0.12.7",
+    "prettier": "latest",
+    "tslint": "latest",
+    "typescript": "3.7.2"
+  },
+  "dependencies": {
+    "@types/dompurify": "^3.0.5",
+    "bootstrap": "^3.3.1",
+    "bootstrap-iconpicker": "^1.8.2",
+    "bootstrap-multiselect": "^0.9.13-1",
+    "bootstrap-switch": "^3.3.4",
+    "canvg": "^1.5.3",
+    "cldr": "^4.13.0",
+    "cldr-data": "^34.0.0",
+    "cldrjs": "^0.4.4",
+    "core-js": "2.5.7",
+    "devextreme": "17.2.3",
+    "dompurify": "^3.1.5",
+    "durandal": "^2.2.0",
+    "es6-promise": "^4.2.5",
+    "fullcalendar": "^2.8.0",
+    "globalize": "^1.1.1",
+    "html2canvas": "^0.5.0-alpha1",
+    "jasmine-core": "^3.3.0",
+    "jquery": "^1.11.3",
+    "jquery-file-download": "^1.4.5",
+    "jquery-highlight": "^3.4.0",
+    "jquery-validation": "^1.13.1",
+    "jquery.splitter": "^0.27.1",
+    "jsplumb": "^1.7.9",
+    "jstree": "^3.0.9",
+    "jszip": "^3.1.5",
+    "knockout": "3.4.2",
+    "knockout-mapping": "^2.6.0",
+    "knockout.validation": "^2.0.3",
+    "leaflet": "^0.7.7",
+    "leaflet-contextmenu": "^1.4.0",
+    "leaflet.label": "^0.2.4",
+    "leaflet.markercluster": "git://github.com/Leaflet/Leaflet.markercluster.git#leaflet-0.7",
+    "moment": "^2.24.0",
+    "requirejs": "^2.3.6",
+    "requirejs-plugins": "^1.0.2",
+    "respond.js": "^1.4.2",
+    "rgbcolor": "^1.0.1",
+    "select2": "3.5.2-browserify",
+    "signalr": "^2.2.1",
+    "split.js": "1.3.5",
+    "stackblur-canvas": "^2.0.0",
+    "store": "^1.3.17",
+    "toastr": "^2.1.4",
+    "twbs-pagination": "^1.4.1",
+    "underscore": "^1.9.1"
+  }
+}
